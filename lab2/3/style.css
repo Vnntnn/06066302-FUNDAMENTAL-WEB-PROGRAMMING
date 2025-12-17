@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background: white;
+    color: #111;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: rgb(98, 33, 33);
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 700px;
+    table-layout: fixed;
+}
+
+.calendar th {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: #999;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.calendar td {
+    padding: 20px 10px;
+    text-align: center;
+    height: 55px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: 1px solid black;
+}
+
+.calendar td.weekend {
+    color: #5b9fd8;
+    font-weight: 600;
+}
+
+.calendar td.weekday {
+    color: #000;
+    font-weight: 600;
+}
+
+.calendar td.other-month {
+    background: white;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.calendar td.other-month.weekend {
+    color: #b3d9f2;
+}

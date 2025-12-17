@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background: white;
+    color: #111;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.bar {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.bar[style*="width: 98%"] {
+    background: gray;
+}
+
+.bar[style*="width: 85%"] {
+    background: blue;
+}
+
+.bar[style*="width: 65%"] {
+    background: green;
+}
+
+.bar[style*="width: 72%"] {
+    background: purple;
+}
+
+.bar[style*="width: 69%"] {
+    background: red;
+}
