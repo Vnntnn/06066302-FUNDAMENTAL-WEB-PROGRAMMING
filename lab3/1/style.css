@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.reg {
+    background: rgb(255, 255, 255);
+    display: flex;
+    padding: 20px 20px;
+    border-radius: 2%;
+    box-shadow: 1px 2px solid #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    color: rgb(59, 59, 59);
+}
+
+input {
+    width: 35vw;
+    height: 3vw;
+}
+
+input[type="text"], input[type="password"] {
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+}
+
+input[type="submit"] {
+    color: #fff;
+    background-color: rgb(20, 118, 238);
+    border-radius: 8px;
+    border: none;
+}

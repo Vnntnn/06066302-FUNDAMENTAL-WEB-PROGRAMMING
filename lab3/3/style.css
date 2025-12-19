@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Prompt", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grade_table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid #a7a7a7;
+    padding: 10px;
+    text-align: center;
+    background-color: grey;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+button {
+    width: 10vw;
+    height: 3vw;
+    color: #fff;
+    background-color: rgb(20, 118, 238);
+    border-radius: 8px;
+    border: none;
+}
