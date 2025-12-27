@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Charm", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+label, input, select {
+    margin-bottom: 7px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 0px 10px 0px 10px;
+}
