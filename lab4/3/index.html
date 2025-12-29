@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Lab4-3</title>
+</head>
+<body>
+    <header>
+        <h1>ตารางรายรับ-รายจ่าย</h1>
+        <p>ยอดคงเหลือ</p>
+        <p id="amount">0.00</p>
+    </header>
+    <main>
+        <div class="inp-bill" id="inp-bill">
+            <input type="text" placeholder="รายการ" id="bill-name">
+            <input type="text" placeholder="จำนวนเงิน" id="bill-amount">
+            <select name="income-outcome">
+                <option value="outcome" selected="selected">รายจ่าย</option>
+                <option value="income">รายรับ</option>
+            </select>
+            <input type="date" id="s-date">
+            <button>เพิ่มรายการ</button>
+        </div>
+        <div class="sh-bills" id="sh-bills">
+            <table>
+                <thead>
+                    <tr>
+                        <th>วันที่</th>
+                        <th>รายการ</th>
+                        <th>รายรับ</th>
+                        <th>รายจ่าย</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

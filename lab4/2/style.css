@@ -14,6 +14,11 @@ body {
     min-height: 90vh;
 }
 
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
 label, input, select {
     margin-bottom: 7px;
 }
