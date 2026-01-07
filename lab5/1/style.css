@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Niramit", sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    padding-bottom: 2em;
+    line-height: 1.5;
+}
+
+header {
+    margin-bottom: 2em;
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main h2 {
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+}
+
+main .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2%;
+}
+
+main .article-card {
+    background-color: #ffffff;
+    border-radius: 1em;
+    box-shadow: 1px 1px 5px #a1a1a1;
+    width: 18vw;
+    min-height: 30vh;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+main .article-card .content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main .article-card h4 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+main .article-card p {
+    flex-grow: 1;
+    margin-bottom: 1em;
+    font-size: 0.95em;
+}
+
+main .article-card a {
+    margin-top: auto;
+    color: rgb(52, 52, 199);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    main .container {
+        flex-direction: column;
+    }
+
+    main .article-card {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 1em;
+    }
+}
