@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-family: "Google Sans Flex", sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+table thead tr {
+    border-bottom: 2px solid rgb(207, 207, 207);
+}
+
+table thead tr th {
+    width: 20em;
+    text-align: left;
+    padding-right: 2em;
+    padding-bottom: 0.5em;
+}
+
+table tbody tr td {
+    height: 1em;
+    padding: 0.6vw;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1.5px solid rgb(235, 235, 235);
+}
+
+#ID-title {
+    padding-right: 1.5em;
+    padding-left: 0.5em;
+    width: 2em;
+}
+
+#Name-title {
+    width: 10em;
+}
+
+#Gender-title {
+    width: 3em;
+}
+
+#Position-title {
+    width: 14em;
+}
+
+#Address-title {
+    width: 17em;
+}

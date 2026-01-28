@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mid-1</title>
+    <style>
+      @font-face {
+        font-family: 'Segoe UI';
+        src: url('SegoeUI.ttf');
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI';
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+      }
+      tr th {
+        align-items: center;
+        background: #48a1f3;
+        padding: 10px 30px 10px 0;
+        text-align: left;
+        color: #fff;
+      }
+
+      tr td {
+        padding: 10px 30px 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const body = document.querySelector("body");
+
+      fetch("employees.json")
+        .then((response) => response.json())
+        .then((data) => initPage(data))
+        .catch((err) => console.log("err:" + err));
+
+      function initPage(data) {
+        const headTitle = [];
+        const body = document.querySelector("body");
+        const table = document.createElement("table");
+        table.style.borderCollapse = "collapse";
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
+        const title = document.createElement("tr");
+
+        data.forEach((element) => {
+          Object.keys(element).forEach((key) => {
+            !headTitle.includes(key) && headTitle.push(key);
+          });
+        });
+
+        headTitle.forEach((t) => {
+          const text = document.createElement("th");
+          if (t === "id") {
+            text.style.paddingLeft = "10px";
+          }
+          text.appendChild(document.createTextNode(`${t.toUpperCase()}`));
+          title.appendChild(text);
+        });
+
+        cnt = 1;
+        data.forEach((element) => {
+          const detail = document.createElement("tr");
+          headTitle.forEach((el) => {
+            const elem = document.createElement("td");
+            if (el === "position_bar") {
+              const mainBar = document.createElement("div");
+              mainBar.style.width = "100%";
+              mainBar.style.background = "grey";
+              mainBar.style.borderRadius = "30px";
+              mainBar.style.boxSizing = "border-box";
+
+              const bar = document.createElement("div");
+              bar.style.width = `${element[el]}%`;
+              bar.style.height = "1em";
+              bar.style.borderRadius = "30px";
+              bar.style.boxSizing = "border-box";
+              bar.style.display = "block";
+              parseInt(element[el]) === 100
+                ? (bar.style.background = "green")
+                : (bar.style.background = "yellow");
+              mainBar.appendChild(bar);
+              elem.appendChild(mainBar);
+            } else if (el === "gender") {
+              const cover = document.createElement("div");
+              cover.style.borderRadius = "50%";
+              cover.style.width = "25px";
+              cover.style.height = "25px";
+              cover.style.display = "flex";
+              cover.style.justifyContent = "center";
+              cover.style.alignItems = "center";
+              cover.style.background =
+              element[el] === "M" ? "#c1e1ff" : "#ffb8f3";
+              const text = document.createElement("p");
+              text.style.color = element[el] === "M" ? "#0084ff" : "#ff00d4";
+              const tNode = document.createTextNode(element[el]);
+              text.appendChild(tNode);
+              cover.appendChild(text);
+              elem.appendChild(cover);
+            }
+            else {
+              elem.appendChild(document.createTextNode(element[el]));
+            }
+            detail.appendChild(elem);
+          });
+          if (cnt % 2 == 0) {
+            detail.style.background = "#d8d8d8";
+          }
+          tbody.appendChild(detail);
+          cnt++;
+        });
+
+        thead.append(title);
+        table.append(thead);
+        table.appendChild(tbody);
+        body.append(table);
+      }
+    </script>
+  </body>
+</html>

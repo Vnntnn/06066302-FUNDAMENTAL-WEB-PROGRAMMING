@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid-2</title>
+    <style>
+        @font-face {
+            font-family: "Segoe UI";
+            src: url(SegoeUI.ttf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .fill-area {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+        }
+
+        .select-area {
+            width: 20vw;
+            height: 5vh;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="fill-area">
+            <label>เลือกผู้ใช้งาน</label>
+            <select name="select-user-name" placeholder="กรุณาเลือกผู้ใช้งาน" id="select-username" class="select-area" required>
+                <option hidden>กรุณาเลือกผู้ใช้</option>
+            </select>
+            <button>แสดงข้อมูลผู้ใช้</button>
+        </div>
+        <div class="main-form">
+            <div class="fill-area">
+                <label>หมายเลขบัตรประชาชน:</label>
+                <input type="text" placeholder="กรุณากรอกหมายเลขประชาชน" id="thai-id" class="select-area">
+            </div>
+            <div class="fill-area">
+                <label>คำนำหน้านาม:</label>
+                <select required class="select-area">
+                    <option value="" hidden disabled>กรุณาเลือกคำนำหน้า</option>
+                    <option value="male">นาย</option>
+                    <option value="female">นางสาว</option>
+                </select>
+            </div>
+            <div class="fill-area">
+                <label>ชื่อ:</label>
+                <input type="text" placeholder="กรุณากรอกชื่อของคุณ" id="firstname" class="select-area">
+            </div>
+            <div class="fill-area">
+                <label for="">นามสกุล:</label>
+                <input type="text" placeholder="กรุณากรอกนามสกุลของคุณ" id="lastname" class="select-area">
+            </div>
+            <div class="fill-area">
+                <label for="">Email:</label>
+                <input type="email" placeholder="กรุณากรอกemail ของคุณ" class="select-area">
+            </div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <script>
+        fetch('employees.json')
+            .then(response => response.json())
+            .then(data => )
+            .catch()
+
+        function addList(data) {
+
+        }
+    </script>
+</body>
+
+</html>
